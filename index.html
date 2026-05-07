@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+
+<html class="light" lang="sv"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eleva - Strategic Consulting</title>
+<script type='text/javascript' nonce='tQCEYJDJksCVC1egUPDA9w==' src='https://contribution.usercontent.google.com/F3jYO-nZ-ri0cxXr6625yGgfrxXZiXB1jQjATEIY8Kclmiu54bw47H7EDAvH455eDz-CEPtO9s7Df7Xi63JsZf6Pez6xFi0E49W97uWi2JlZMhHdOnQMQbup_bjfz2uVM0fQOqheVIY20KT_TSBcF0yxwNUSUXHKIrZ7bNCyUdrNwzyLZP_KfoxWGmO2VftL6AK9z-HGqSln9_C6UYPLMiVIvJBYNKzWrQtyoQ-Gyj_3ew4798T1kxfpzVA9f5aqLNscRQwY2vHyzHC7ghR9XjPJgUKlKBIlf_Rc4atasckzJrpMT4QBN7DPe1pZeq9I1rqlnig_DJ1XXjJ6XQhjivAUlo0DCPNBEipuW1qCa6FirocSOJli1aEtxmHxG6fm2PONPWfhXUnrD_t6Xk7wPmkFTfzokb9cD0xX8Skfl2ZU9WwG0vG4MqHHw06UeG2bmPdCJuWYV1AJN8NwLvpinhvA64Td-6FrRTdx8mHIXfBqslnICjWiuNk_KBItQhe3rF7MeIInC_0LC4tFN1kem0wOPeP1SQeUZ26YCmhBVP-DZUKZEaFe6zOzB3ASpEDgDBgiNWI3EneEetw8mJFeYSesEHUYeJfTacLQnbU6U-tZc_L4d_v5prWulJ9vSpOcrUfnzHbU86B6o8FRFq5JCw15vOms76vUCZi9xJxRpIsTP655U5Z92NAi5AZkeAAGcARg4WLdWw9qP8lEUE3Yv4DmCdlIKLRQXtK_r-5dFLqPbPz691iy_GrpI8uJWDLUUq3Poz9URBUXAy45xd4XoknGFCP0SF5Zo9eTJDgA'></script><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-lowest": "#ffffff",
+                "secondary-container": "#d0e5d2",
+                "error-container": "#ffdad6",
+                "primary-fixed-dim": "#c9c6c1",
+                "error": "#ba1a1a",
+                "inverse-on-surface": "#f8efea",
+                "surface-container-low": "#fbf2ed",
+                "on-primary-fixed": "#1c1c19",
+                "surface-container-highest": "#e9e1dc",
+                "on-surface-variant": "#484740",
+                "surface-bright": "#fff8f5",
+                "secondary-fixed-dim": "#b7ccb9",
+                "surface-dim": "#e1d8d4",
+                "outline-variant": "#c9c6bd",
+                "surface-variant": "#e9e1dc",
+                "on-primary-container": "#72706c",
+                "on-error": "#ffffff",
+                "surface-container": "#f5ece7",
+                "tertiary-fixed-dim": "#ffb596",
+                "on-secondary-container": "#546758",
+                "tertiary-container": "#fff3ef",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed-variant": "#484743",
+                "tertiary-fixed": "#ffdbcd",
+                "on-tertiary-fixed-variant": "#76320f",
+                "outline": "#79776f",
+                "tertiary": "#944925",
+                "inverse-primary": "#c9c6c1",
+                "on-error-container": "#93000a",
+                "on-secondary-fixed-variant": "#394b3d",
+                "on-tertiary-fixed": "#360f00",
+                "on-primary": "#ffffff",
+                "surface-tint": "#605e5b",
+                "on-tertiary-container": "#aa5a34",
+                "surface": "#fff8f5",
+                "inverse-surface": "#34302c",
+                "on-background": "#1e1b18",
+                "surface-container-high": "#efe6e2",
+                "on-secondary-fixed": "#0e1f13",
+                "primary-fixed": "#e6e2dd",
+                "on-surface": "#1e1b18",
+                "on-tertiary": "#ffffff",
+                "background": "#fff8f5",
+                "secondary": "#506354",
+                "secondary-fixed": "#d3e8d5",
+                "primary": "#605e5b",
+                "primary-container": "#f9f5f0"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "margin-page": "48px",
+                "section-gap": "120px",
+                "container-max": "1200px",
+                "unit": "8px",
+                "gutter": "24px"
+        },
+        "fontFamily": {
+                "headline-xl": [
+                        "Public Sans"
+                ],
+                "body-md": [
+                        "Public Sans"
+                ],
+                "headline-md": [
+                        "Public Sans"
+                ],
+                "body-lg": [
+                        "Public Sans"
+                ],
+                "label-caps": [
+                        "Public Sans"
+                ],
+                "headline-lg": [
+                        "Public Sans"
+                ]
+        },
+        "fontSize": {
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "300"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "500"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-caps": [
+                        "12px",
+                        {
+                                "lineHeight": "1.0",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    background-image:
+      radial-gradient(1200px 600px at 80% -10%, rgba(148,73,37,0.06), transparent 60%),
+      radial-gradient(900px 500px at -10% 30%, rgba(80,99,84,0.05), transparent 55%),
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.38 0 0 0 0 0.36 0 0 0 0 0.34 0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal[data-delay="1"] { transition-delay: .08s; }
+  .reveal[data-delay="2"] { transition-delay: .16s; }
+  .reveal[data-delay="3"] { transition-delay: .24s; }
+  .reveal[data-delay="4"] { transition-delay: .32s; }
+  .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(72,71,64,.35), transparent); }
+  .stamp {
+    width: 56px; height: 56px; border-radius: 4px;
+    background: #944925; color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: 'Public Sans'; font-weight: 600; letter-spacing: .12em;
+    box-shadow: 0 1px 0 rgba(0,0,0,.05), inset 0 0 0 2px rgba(255,255,255,.18);
+    transform: rotate(-6deg);
+  }
+  .float-slow { animation: floatY 9s ease-in-out infinite; }
+  .float-slower { animation: floatY 13s ease-in-out infinite reverse; }
+  @keyframes floatY { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+  .nav-link { position: relative; }
+  .nav-link::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 1px;
+    background: currentColor; transform: scaleX(0); transform-origin: left;
+    transition: transform .35s ease;
+  }
+  .nav-link:hover::after { transform: scaleX(1); }
+  .btn-primary { position: relative; overflow: hidden; }
+  .btn-primary::before {
+    content: ""; position: absolute; inset: 0; background: #944925;
+    transform: translateY(101%); transition: transform .35s ease;
+  }
+  .btn-primary > span { position: relative; z-index: 1; }
+  .btn-primary:hover::before { transform: translateY(0); }
+  .pill-byrapilot {
+    background: rgba(80,99,84,.10); color: #394b3d;
+    padding: 2px 8px; border-radius: 999px; font-size: 10px;
+    margin-left: 6px; letter-spacing: .12em;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .float-slow, .float-slower { animation: none; }
+  }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- TopNavBar -->
+<header class="bg-surface/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30 flat no-shadows">
+<div class="flex justify-between items-center h-20 px-margin-page max-w-container-max mx-auto">
+<a href="#" class="flex items-center gap-3 text-primary">
+  <span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+  <span class="font-headline-md text-headline-md tracking-tight">Eleva</span>
+</a>
+<nav class="hidden md:flex gap-margin-page items-center">
+<a class="nav-link font-label-caps text-label-caps uppercase tracking-widest text-primary hover:text-tertiary transition-colors duration-300" href="#tjanster">Tjänster</a>
+<a class="nav-link font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#metoden">Metoden</a>
+<a class="nav-link font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#byrapilot">Byråpilot</a>
+<a class="nav-link font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#om-oss">Om oss</a>
+<a class="nav-link font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant hover:text-tertiary transition-colors duration-300" href="#kontakt">Kontakt</a>
+</nav>
+<a href="#kontakt" class="btn-primary hidden md:inline-block bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-gutter py-3 rounded-full transition-colors">
+  <span>Boka en första analys</span>
+</a>
+<button id="menuBtn" class="md:hidden text-primary" aria-label="Öppna meny">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobileMenu" class="hidden md:hidden border-t border-outline-variant/30 bg-surface">
+  <div class="flex flex-col px-margin-page py-gutter gap-3">
+    <a class="font-label-caps text-label-caps uppercase tracking-widest text-primary py-2" href="#tjanster">Tjänster</a>
+    <a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#metoden">Metoden</a>
+    <a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#byrapilot">Byråpilot</a>
+    <a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#om-oss">Om oss</a>
+    <a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface-variant py-2" href="#kontakt">Kontakt</a>
+  </div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="py-section-gap px-margin-page max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-margin-page items-center">
+<div class="max-w-2xl reveal">
+<div class="flex items-center gap-3 mb-gutter">
+  <span class="hairline w-10"></span>
+  <span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">Verksamhetsutveckling · Sverige</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-gutter">
+                    Vi hjälper företag växa smartare med bättre processer, struktur och digitala arbetssätt.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-margin-page">
+                    Eleva kombinerar verksamhetsutveckling, processanalys och digital implementation för att hjälpa företag minska friktion, spara tid och få bättre kontroll över sin verksamhet.
+                </p>
+<div class="flex flex-col sm:flex-row gap-gutter">
+<a href="#kontakt" class="btn-primary bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-gutter py-4 rounded-full transition-colors text-center">
+  <span>Boka en första analys</span>
+</a>
+<a href="#tjanster" class="bg-transparent text-primary border border-outline font-label-caps text-label-caps uppercase tracking-widest px-gutter py-4 rounded-full hover:bg-surface-variant transition-colors text-center">
+                        Se hur vi hjälper
+                    </a>
+</div>
+<div class="mt-margin-page flex items-center gap-gutter text-on-surface-variant">
+  <div class="stamp">整</div>
+  <div>
+    <div class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-1">Verksamhet i ordning</div>
+    <div class="font-body-md text-body-md">Mindre friktion. Tydligare struktur. Mätbar effekt.</div>
+  </div>
+</div>
+<div class="mt-gutter grid grid-cols-3 gap-gutter max-w-lg">
+  <div class="border-l border-outline-variant pl-4">
+    <div class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-1">Fokus</div>
+    <div class="font-body-md text-body-md text-primary">Små &amp; medel­stora företag</div>
+  </div>
+  <div class="border-l border-outline-variant pl-4">
+    <div class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-1">Grund</div>
+    <div class="font-body-md text-body-md text-primary">Systemvetenskap &amp; processteori</div>
+  </div>
+  <div class="border-l border-outline-variant pl-4">
+    <div class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-1">Resultat</div>
+    <div class="font-body-md text-body-md text-primary">Mindre manuellt arbete</div>
+  </div>
+</div>
+</div>
+<div class="reveal" data-delay="2">
+<div class="relative w-full aspect-square md:aspect-[4/3] bg-surface-container rounded-2xl p-gutter overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container-low via-surface-container to-secondary-container/60"></div>
+<!-- shoji grid -->
+<div class="absolute inset-0 opacity-40" style="background-image: linear-gradient(rgba(72,71,64,.15) 1px, transparent 1px), linear-gradient(90deg, rgba(72,71,64,.15) 1px, transparent 1px); background-size: 64px 64px;"></div>
+<!-- moss circle -->
+<div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-secondary/20 blur-2xl"></div>
+<!-- terracotta dot -->
+<div class="absolute top-8 right-8 w-3 h-3 rounded-full bg-tertiary"></div>
+
+<div class="relative flex flex-col gap-gutter w-full h-full p-margin-page justify-center">
+  <!-- card 1: KPI -->
+  <div class="float-slow bg-surface rounded-xl h-28 w-3/4 -rotate-2 border border-outline-variant/40 flex items-center px-gutter gap-4">
+    <div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center">
+      <span class="material-symbols-outlined text-secondary text-[20px]">trending_up</span>
+    </div>
+    <div class="flex-1">
+      <div class="font-label-caps text-label-caps uppercase text-outline mb-1">Manuella moment</div>
+      <div class="font-headline-md text-headline-md text-primary leading-none">−42%</div>
+    </div>
+  </div>
+  <!-- card 2: workflow -->
+  <div class="float-slower bg-surface rounded-xl h-36 w-5/6 rotate-1 border border-outline-variant/40 px-gutter py-4 self-end">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="material-symbols-outlined text-tertiary text-[18px]">bolt</span>
+      <div class="font-label-caps text-label-caps uppercase tracking-widest text-outline">Automatiserat flöde</div>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="h-8 w-1/4 rounded-md bg-surface-container-high"></div>
+      <span class="material-symbols-outlined text-outline text-[14px]">arrow_forward</span>
+      <div class="h-8 w-1/4 rounded-md bg-secondary-container"></div>
+      <span class="material-symbols-outlined text-outline text-[14px]">arrow_forward</span>
+      <div class="h-8 w-1/4 rounded-md bg-tertiary-container"></div>
+    </div>
+    <div class="mt-3 h-1.5 w-1/2 bg-outline-variant/40 rounded-full"></div>
+  </div>
+  <!-- card 3: status -->
+  <div class="float-slow bg-surface rounded-xl h-20 w-2/3 -rotate-1 border border-outline-variant/40 flex items-center px-gutter gap-3">
+    <span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+    <div class="flex-1">
+      <div class="font-body-md text-body-md text-primary">System synkat</div>
+      <div class="font-label-caps text-label-caps uppercase text-outline">CRM · Ekonomi · Drive</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="px-margin-page max-w-container-max mx-auto"><div class="hairline"></div></div>
+<!-- Problem Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="px-margin-page max-w-container-max mx-auto">
+<div class="text-center mb-margin-page reveal">
+  <span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">Problemet</span>
+  <h2 class="font-headline-lg text-headline-lg text-primary mt-3 max-w-3xl mx-auto">
+                Många företag växer snabbare än deras arbetssätt hinner med.
+            </h2>
+  <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-4">
+    Det är sällan en enskild sak som bromsar — det är summan av små otydligheter i hur arbetet faktiskt görs.
+  </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30 hover:-translate-y-1 hover:border-tertiary/40 transition-all duration-300" data-delay="1">
+<span class="material-symbols-outlined text-tertiary mb-gutter text-[32px] font-light">schedule</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Manuella rutiner tar onödig tid</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Återkommande arbete som hade kunnat förenklas, standardiseras eller automatiseras.</p>
+</div>
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30 hover:-translate-y-1 hover:border-tertiary/40 transition-all duration-300" data-delay="2">
+<span class="material-symbols-outlined text-tertiary mb-gutter text-[32px] font-light">dns</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Information ligger utspridd</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Mail, Excel-filer och olika system gör att samma uppgifter skapas flera gånger på olika ställen.</p>
+</div>
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30 hover:-translate-y-1 hover:border-tertiary/40 transition-all duration-300" data-delay="3">
+<span class="material-symbols-outlined text-tertiary mb-gutter text-[32px] font-light">groups</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Ansvar och roller är otydliga</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Det är inte alltid klart vem som äger ett flöde, ett beslut eller en återkommande uppgift.</p>
+</div>
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30 hover:-translate-y-1 hover:border-tertiary/40 transition-all duration-300" data-delay="1">
+<span class="material-symbols-outlined text-tertiary mb-gutter text-[32px] font-light">conversion_path</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Kundflöden saknar struktur</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Från första kontakt till leverans hanteras varje kund lite olika, vilket gör det svårt att skala.</p>
+</div>
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30 hover:-translate-y-1 hover:border-tertiary/40 transition-all duration-300" data-delay="2">
+<span class="material-symbols-outlined text-tertiary mb-gutter text-[32px] font-light">extension_off</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">System används inte fullt ut</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Verktyg är på plats men nyttjas inte som tänkt — funktioner saknas, eller används inkonsekvent.</p>
+</div>
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30 hover:-translate-y-1 hover:border-tertiary/40 transition-all duration-300" data-delay="3">
+<span class="material-symbols-outlined text-tertiary mb-gutter text-[32px] font-light">explore</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Vi vet att något behöver förbättras</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">…men inte var man ska börja, vilket gör att förbättringsarbetet skjuts upp år efter år.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="tjanster" class="py-section-gap px-margin-page max-w-container-max mx-auto scroll-mt-24">
+<div class="text-center mb-margin-page reveal">
+  <span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">Tjänster</span>
+  <h2 class="font-headline-lg text-headline-lg text-primary mt-3">Fyra områden — en sammanhängande metod</h2>
+  <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-4">
+    Vi arbetar genom hela kedjan: från att förstå verksamheten till att få nya arbetssätt att fungera i praktiken.
+  </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="reveal flex p-gutter rounded-xl bg-surface-container-low border border-outline-variant/20 hover:bg-surface-container hover:border-tertiary/30 transition-all group" data-delay="1">
+<div class="mr-gutter">
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors text-[40px] font-light">analytics</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Verksamhetsanalys</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Vi kartlägger hur verksamheten fungerar idag och identifierar flaskhalsar, tidstjuvar och förbättringsområden.</p>
+</div>
+</div>
+<div class="reveal flex p-gutter rounded-xl bg-surface-container-low border border-outline-variant/20 hover:bg-surface-container hover:border-tertiary/30 transition-all group" data-delay="2">
+<div class="mr-gutter">
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors text-[40px] font-light">account_tree</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Processförbättring</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Vi hjälper er skapa tydligare, effektivare och mer skalbara arbetsflöden — så att rätt person gör rätt sak vid rätt tillfälle.</p>
+</div>
+</div>
+<div class="reveal flex p-gutter rounded-xl bg-surface-container-low border border-outline-variant/20 hover:bg-surface-container hover:border-tertiary/30 transition-all group" data-delay="3">
+<div class="mr-gutter">
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors text-[40px] font-light">architecture</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Digital strategi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Vi analyserar vilka system, verktyg och digitala arbetssätt som bäst stödjer verksamheten — och vilka som bara ligger i vägen.</p>
+</div>
+</div>
+<div class="reveal flex p-gutter rounded-xl bg-surface-container-low border border-outline-variant/20 hover:bg-surface-container hover:border-tertiary/30 transition-all group" data-delay="4">
+<div class="mr-gutter">
+<span class="material-symbols-outlined text-outline group-hover:text-tertiary transition-colors text-[40px] font-light">dashboard_customize</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary mb-unit">Automation och systemlösningar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Vi bygger eller inför praktiska lösningar som minskar manuellt arbete och förbättrar överblicken över verksamheten.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Method Section -->
+<section id="metoden" class="bg-surface-container-low py-section-gap scroll-mt-24">
+<div class="px-margin-page max-w-container-max mx-auto">
+<div class="text-center mb-margin-page reveal">
+  <span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">道 · Metoden</span>
+  <h2 class="font-headline-lg text-headline-lg text-primary mt-3">Lugn struktur. Verklig förändring.</h2>
+  <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-4">
+    Vi följer en strukturerad väg från förståelse till handling — långsamt nog för att förstå er verksamhet, snabbt nog för att leverera värde inom några veckor.
+  </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30" data-delay="1">
+  <div class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary mb-3">Steg 01</div>
+  <h3 class="font-headline-md text-headline-md text-primary mb-unit">Kartläggning</h3>
+  <p class="font-body-md text-body-md text-on-surface-variant">Vi går igenom nuläget, era viktigaste flöden och var friktion uppstår.</p>
+</div>
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30" data-delay="2">
+  <div class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary mb-3">Steg 02</div>
+  <h3 class="font-headline-md text-headline-md text-primary mb-unit">Analys</h3>
+  <p class="font-body-md text-body-md text-on-surface-variant">Vi identifierar flaskhalsar, manuella moment, systemproblem och organisatoriska hinder.</p>
+</div>
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30" data-delay="3">
+  <div class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary mb-3">Steg 03</div>
+  <h3 class="font-headline-md text-headline-md text-primary mb-unit">Förbättringsplan</h3>
+  <p class="font-body-md text-body-md text-on-surface-variant">Ni får konkreta rekommendationer och en prioriterad handlingsplan.</p>
+</div>
+<div class="reveal bg-surface p-gutter rounded-xl border border-outline-variant/30" data-delay="4">
+  <div class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary mb-3">Steg 04</div>
+  <h3 class="font-headline-md text-headline-md text-primary mb-unit">Genomförande</h3>
+  <p class="font-body-md text-body-md text-on-surface-variant">Vi hjälper er implementera förbättringarna — genom struktur, processer, automation eller systemstöd.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Värde / Affärsnytta -->
+<section class="py-section-gap px-margin-page max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-margin-page">
+  <div class="reveal lg:col-span-1">
+    <span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">価 · Affärsnytta</span>
+    <h2 class="font-headline-lg text-headline-lg text-primary mt-3 mb-gutter">Konkret affärsnytta — inte teknik för teknikens skull</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant">
+      Allt vi gör mäts mot verksamheten: blev arbetet enklare, snabbare eller tydligare? Om svaret är nej, är det inte rätt lösning.
+    </p>
+  </div>
+  <div class="reveal lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-gutter" data-delay="2">
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-tertiary text-[24px] mt-1">schedule</span>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-1">Spara tid</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Mindre dubbelarbete och färre manuella moment i vardagen.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-tertiary text-[24px] mt-1">edit_off</span>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-1">Minska manuellt arbete</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Återkommande uppgifter sköts av systemen, inte av människor.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-tertiary text-[24px] mt-1">visibility</span>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-1">Bättre kontroll</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Tydlig överblick över verksamhet, kunder och leverans.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-tertiary text-[24px] mt-1">badge</span>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-1">Tydligare ansvar</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Roller, ägarskap och beslutsvägar blir lättare att följa.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-tertiary text-[24px] mt-1">conversion_path</span>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-1">Bättre kundflöden</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Från första kontakt till leverans hanteras kunder konsekvent.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4">
+      <span class="material-symbols-outlined text-tertiary text-[24px] mt-1">tune</span>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-1">Använda system bättre</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Få ut mer av det ni redan betalar för innan ni byter ut det.</p>
+      </div>
+    </div>
+    <div class="flex items-start gap-4 sm:col-span-2">
+      <span class="material-symbols-outlined text-tertiary text-[24px] mt-1">trending_up</span>
+      <div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-1">Mer skalbar verksamhet</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Ni kan ta in fler kunder eller medarbetare utan att rutinerna spricker.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Byråpilot section -->
+<section id="byrapilot" class="bg-surface-container-low py-section-gap scroll-mt-24">
+<div class="px-margin-page max-w-container-max mx-auto">
+<div class="reveal relative overflow-hidden bg-inverse-surface text-inverse-on-surface rounded-2xl p-margin-page md:p-16">
+  <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-tertiary/20 blur-3xl"></div>
+  <div class="absolute -left-12 -bottom-12 w-64 h-64 rounded-full bg-secondary/20 blur-3xl"></div>
+  <div class="relative grid grid-cols-1 md:grid-cols-3 gap-margin-page items-center">
+    <div class="md:col-span-2">
+      <span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary-fixed-dim">En specialiserad gren av Eleva</span>
+      <h2 class="font-headline-lg text-headline-lg mt-3 mb-gutter text-inverse-on-surface">Byråpilot by Eleva</h2>
+      <p class="font-body-lg text-body-lg text-inverse-on-surface/80 max-w-xl mb-gutter">
+        Byråpilot är Elevas specialiserade gren för redovisningsbyråer, lönebyråer och administrativa företag. Vi hjälper byråer minska manuellt arbete, förbättra kundunderlagsflöden och skapa tydligare digitala rutiner för återkommande administration.
+      </p>
+      <p class="font-body-md text-body-md text-inverse-on-surface/60 max-w-xl">
+        Samma metod, samma team — fokuserad på de processer och system som är specifika för byråverksamhet.
+      </p>
+    </div>
+    <div class="md:text-right">
+      <a href="https://byråpilot.se" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 bg-tertiary text-on-tertiary font-label-caps text-label-caps uppercase tracking-widest px-gutter py-4 rounded-full hover:bg-tertiary/90 transition-colors">
+        Utforska Byråpilot
+        <span class="material-symbols-outlined text-[18px]">north_east</span>
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<!-- About / Om oss -->
+<section id="om-oss" class="py-section-gap px-margin-page max-w-container-max mx-auto scroll-mt-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-margin-page items-start">
+  <div class="lg:col-span-5 reveal">
+    <span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">Om Eleva</span>
+    <h2 class="font-headline-lg text-headline-lg text-primary mt-3">Verksamhetsförståelse med digital edge</h2>
+  </div>
+  <div class="lg:col-span-7 reveal" data-delay="2">
+    <p class="font-body-lg text-body-lg text-on-surface-variant mb-gutter">
+      Eleva bygger på systemvetenskapligt tänkande: att förstå hur människor, processer, information och teknik samverkar. Målet är inte att införa teknik för teknikens skull, utan att skapa arbetssätt som gör verksamheten tydligare, effektivare och lättare att utveckla.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter mt-margin-page">
+      <div class="border-l border-outline-variant pl-4">
+        <div class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2">Grundtanke</div>
+        <div class="font-body-md text-body-md text-primary">Människor, process, system — i den ordningen.</div>
+      </div>
+      <div class="border-l border-outline-variant pl-4">
+        <div class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2">Arbetssätt</div>
+        <div class="font-body-md text-body-md text-primary">Strukturerat, mätbart, utan jargong.</div>
+      </div>
+      <div class="border-l border-outline-variant pl-4">
+        <div class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2">Mål</div>
+        <div class="font-body-md text-body-md text-primary">En verksamhet som är lätt att driva och utveckla.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Final CTA / Kontakt -->
+<section id="kontakt" class="py-section-gap px-margin-page max-w-container-max mx-auto scroll-mt-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-margin-page items-center">
+  <div class="reveal">
+    <span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">Nästa steg</span>
+    <h2 class="font-headline-lg text-headline-lg text-primary mt-3 mb-gutter">Vill du veta var ditt företag kan bli mer effektivt?</h2>
+    <p class="font-body-lg text-body-lg text-on-surface-variant mb-margin-page">
+      Boka en första analys så går vi igenom ett konkret arbetsflöde och visar var ni kan spara tid, minska friktion och skapa bättre struktur.
+    </p>
+    <a href="#kontaktformular" class="btn-primary inline-block bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-gutter py-4 rounded-full transition-colors">
+      <span>Boka en första analys</span>
+    </a>
+    <div class="mt-margin-page space-y-3">
+      <a href="mailto:hej@eleva.se" class="flex items-center gap-3 text-primary hover:text-tertiary transition-colors">
+        <span class="material-symbols-outlined">mail</span>
+        <span class="font-body-md text-body-md">hej@eleva.se</span>
+      </a>
+      <div class="flex items-center gap-3 text-on-surface-variant">
+        <span class="material-symbols-outlined">schedule</span>
+        <span class="font-body-md text-body-md">Första samtalet är cirka 30 minuter — inga bindningar.</span>
+      </div>
+    </div>
+  </div>
+  <div class="reveal" data-delay="2" id="kontaktformular">
+    <form class="bg-surface-container-low rounded-2xl p-gutter md:p-margin-page border border-outline-variant/30 space-y-gutter">
+      <div>
+        <label class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">Namn</label>
+        <input type="text" class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md" placeholder="För- och efternamn">
+      </div>
+      <div>
+        <label class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">E-post</label>
+        <input type="email" class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md" placeholder="namn@företag.se">
+      </div>
+      <div>
+        <label class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">Vad vill ni lösa?</label>
+        <textarea rows="3" class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md resize-none" placeholder="Beskriv kort ett arbetsflöde eller område som ni vill se över..."></textarea>
+      </div>
+      <button type="button" class="btn-primary w-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-gutter py-4 rounded-full transition-colors">
+        <span>Boka en första analys</span>
+      </button>
+    </form>
+  </div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container py-margin-page border-t border-outline-variant/30 w-full">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-page max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-primary mb-unit">Eleva</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-gutter">Verksamhetsutveckling &amp; digitalisering för små och medelstora företag.</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">© 2024 Eleva. Alla rättigheter förbehållna.</p>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-gutter">Navigation</h4>
+<ul class="space-y-unit">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all" href="#tjanster">Tjänster</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all" href="#metoden">Metoden</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all" href="#byrapilot">Byråpilot</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all" href="#om-oss">Om oss</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all" href="#kontakt">Kontakt</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-gutter">Legal</h4>
+<ul class="space-y-unit">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all" href="#">Integritetspolicy</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-gutter">Social</h4>
+<ul class="space-y-unit">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-tertiary transition-all" href="#">LinkedIn</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+  }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body></html>
