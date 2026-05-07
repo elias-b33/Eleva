@@ -587,9 +587,9 @@
       <span>Boka en första analys</span>
     </a>
     <div class="mt-margin-page space-y-3">
-      <a href="mailto:hej@eleva.se" class="flex items-center gap-3 text-primary hover:text-tertiary transition-colors">
+      <a href="mailto:eliasbredberg5@gmail.com" class="flex items-center gap-3 text-primary hover:text-tertiary transition-colors">
         <span class="material-symbols-outlined">mail</span>
-        <span class="font-body-md text-body-md">hej@eleva.se</span>
+        <span class="font-body-md text-body-md">eliasbredberg5@gmail.com</span>
       </a>
       <div class="flex items-center gap-3 text-on-surface-variant">
         <span class="material-symbols-outlined">schedule</span>
@@ -598,22 +598,27 @@
     </div>
   </div>
   <div class="reveal" data-delay="2" id="kontaktformular">
-    <form class="bg-surface-container-low rounded-2xl p-gutter md:p-margin-page border border-outline-variant/30 space-y-gutter">
+    <form id="contactForm" class="bg-surface-container-low rounded-2xl p-gutter md:p-margin-page border border-outline-variant/30 space-y-gutter">
       <div>
-        <label class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">Namn</label>
-        <input type="text" class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md" placeholder="För- och efternamn">
+        <label for="cf-name" class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">Namn</label>
+        <input id="cf-name" name="name" type="text" required class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md" placeholder="För- och efternamn">
       </div>
       <div>
-        <label class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">E-post</label>
-        <input type="email" class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md" placeholder="namn@företag.se">
+        <label for="cf-company" class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">Företag</label>
+        <input id="cf-company" name="company" type="text" class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md" placeholder="Företagsnamn (valfritt)">
       </div>
       <div>
-        <label class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">Vad vill ni lösa?</label>
-        <textarea rows="3" class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md resize-none" placeholder="Beskriv kort ett arbetsflöde eller område som ni vill se över..."></textarea>
+        <label for="cf-email" class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">E-post</label>
+        <input id="cf-email" name="email" type="email" required class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md" placeholder="namn@företag.se">
       </div>
-      <button type="button" class="btn-primary w-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-gutter py-4 rounded-full transition-colors">
-        <span>Boka en första analys</span>
+      <div>
+        <label for="cf-msg" class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">Vad vill ni lösa?</label>
+        <textarea id="cf-msg" name="message" rows="3" required class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md resize-none" placeholder="Beskriv kort ett arbetsflöde eller område som ni vill se över..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary w-full bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-widest px-gutter py-4 rounded-full transition-colors">
+        <span>Skicka förfrågan</span>
       </button>
+      <p id="cf-status" class="font-body-md text-body-md text-on-surface-variant text-center hidden"></p>
     </form>
   </div>
 </div>
@@ -661,5 +666,31 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Kontaktformulär → öppnar mailklienten med fälten ifyllda
+  const cf = document.getElementById('contactForm');
+  if (cf) {
+    cf.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name    = document.getElementById('cf-name').value.trim();
+      const company = document.getElementById('cf-company').value.trim();
+      const email   = document.getElementById('cf-email').value.trim();
+      const msg     = document.getElementById('cf-msg').value.trim();
+      const status  = document.getElementById('cf-status');
+
+      const subject = `Förfrågan från ${name}${company ? ' (' + company + ')' : ''}`;
+      const body =
+        `Namn: ${name}\n` +
+        (company ? `Företag: ${company}\n` : '') +
+        `E-post: ${email}\n\n` +
+        `Meddelande:\n${msg}\n`;
+
+      const mailto = `mailto:eliasbredberg5@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+
+      status.textContent = 'Din mailklient öppnas — granska och tryck Skicka. Får du ingen mailklient? Mejla direkt till eliasbredberg5@gmail.com.';
+      status.classList.remove('hidden');
+    });
+  }
 </script>
 </body></html>
