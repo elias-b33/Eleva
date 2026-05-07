@@ -598,7 +598,7 @@
     </div>
   </div>
   <div class="reveal" data-delay="2" id="kontaktformular">
-    <form id="contactForm" class="bg-surface-container-low rounded-2xl p-gutter md:p-margin-page border border-outline-variant/30 space-y-gutter">
+    <form id="contactForm" action="https://formspree.io/f/mzdoazje" method="POST" class="bg-surface-container-low rounded-2xl p-gutter md:p-margin-page border border-outline-variant/30 space-y-gutter">
       <div>
         <label for="cf-name" class="font-label-caps text-label-caps uppercase tracking-widest text-outline mb-2 block">Namn</label>
         <input id="cf-name" name="name" type="text" required class="w-full bg-transparent border-0 border-b border-outline focus:border-tertiary focus:ring-0 px-0 py-2 font-body-md text-body-md" placeholder="För- och efternamn">
@@ -667,29 +667,46 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // Kontaktformulär → öppnar mailklienten med fälten ifyllda
+  // Kontaktformulär → Formspree (AJAX, ingen redirect)
   const cf = document.getElementById('contactForm');
   if (cf) {
-    cf.addEventListener('submit', (e) => {
+    cf.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const name    = document.getElementById('cf-name').value.trim();
-      const company = document.getElementById('cf-company').value.trim();
-      const email   = document.getElementById('cf-email').value.trim();
-      const msg     = document.getElementById('cf-msg').value.trim();
-      const status  = document.getElementById('cf-status');
+      const status = document.getElementById('cf-status');
+      const btn = cf.querySelector('button[type="submit"]');
+      const data = new FormData(cf);
 
-      const subject = `Förfrågan från ${name}${company ? ' (' + company + ')' : ''}`;
-      const body =
-        `Namn: ${name}\n` +
-        (company ? `Företag: ${company}\n` : '') +
-        `E-post: ${email}\n\n` +
-        `Meddelande:\n${msg}\n`;
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Skickar…';
+      status.classList.add('hidden');
 
-      const mailto = `mailto:eliasbredberg5@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      window.location.href = mailto;
-
-      status.textContent = 'Din mailklient öppnas — granska och tryck Skicka. Får du ingen mailklient? Mejla direkt till eliasbredberg5@gmail.com.';
-      status.classList.remove('hidden');
+      try {
+        const res = await fetch(cf.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          cf.reset();
+          status.textContent = 'Tack! Vi återkommer inom kort.';
+          status.classList.remove('hidden', 'text-error');
+          status.classList.add('text-secondary');
+          btn.querySelector('span').textContent = 'Skickat ✓';
+        } else {
+          const json = await res.json().catch(() => ({}));
+          status.textContent = (json.errors && json.errors.map(x => x.message).join(', ')) || 'Något gick fel. Mejla oss direkt på eliasbredberg5@gmail.com.';
+          status.classList.remove('hidden');
+          status.classList.add('text-error');
+          btn.disabled = false;
+          btn.querySelector('span').textContent = 'Försök igen';
+        }
+      } catch (err) {
+        status.textContent = 'Nätverksfel. Mejla oss direkt på eliasbredberg5@gmail.com.';
+        status.classList.remove('hidden');
+        status.classList.add('text-error');
+        btn.disabled = false;
+        btn.querySelector('span').textContent = 'Försök igen';
+      }
     });
   }
 </script>
